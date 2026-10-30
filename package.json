@@ -1,0 +1,14 @@
+{
+  "name": "school-manager",
+  "version": "1.0.0",
+  "description": "Attendance and school fees management for schools, built with vanilla JavaScript and Supabase.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

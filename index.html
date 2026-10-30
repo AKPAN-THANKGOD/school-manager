@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign in | School Manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="login-layout">
+
+    <!-- Left: brand panel -->
+    <section class="brand-panel" aria-hidden="true">
+      <div class="brand-content">
+        <div class="logo">SM</div>
+        <h1>School Manager</h1>
+        <p>Track attendance and school fees in one simple place.</p>
+        <ul class="brand-points">
+          <li>Teachers mark attendance in seconds</li>
+          <li>Admins record payments and print receipts</li>
+          <li>Parents see attendance and balances anytime</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Right: form -->
+    <section class="form-panel">
+      <div class="form-card">
+        <h2>Welcome back</h2>
+        <p class="subtitle">Sign in to continue to your dashboard.</p>
+
+        <div id="alert" class="alert" role="alert" hidden></div>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@school.com" autocomplete="username" required />
+            <small class="field-error" id="email-error"></small>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required />
+              <button type="button" id="toggle-password" class="toggle-btn" aria-label="Show password">Show</button>
+            </div>
+            <small class="field-error" id="password-error"></small>
+          </div>
+
+          <div class="row-between">
+            <label class="remember">
+              <input type="checkbox" id="remember" checked /> Keep me signed in
+            </label>
+            <a href="#" id="forgot-link" class="link">Forgot password?</a>
+          </div>
+
+          <button type="submit" id="submit-btn" class="btn-primary">
+            <span class="btn-label">Sign in</span>
+            <span class="spinner" hidden></span>
+          </button>
+        </form>
+
+        <div class="demo-box">
+          <p class="demo-title">Try the demo</p>
+          <div class="demo-buttons">
+            <button type="button" class="btn-demo" data-role="admin">Admin</button>
+            <button type="button" class="btn-demo" data-role="teacher">Teacher</button>
+            <button type="button" class="btn-demo" data-role="parent">Parent</button>
+          </div>
+          <small>Click a role to fill in the demo login, then press Sign in.</small>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
